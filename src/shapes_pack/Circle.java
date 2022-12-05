@@ -2,26 +2,21 @@ package shapes_pack;
 
 import java.awt.Point;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Circle extends Shape {
-    private Point centerCoordinates = new Point(); // Can be done with generics as well.
+    final static private String DEFAULT_COLOR = "Black";
+    final static private double DEFAULT_RADIUS = 4.0;
+    final static private int DEFAULT_X = 0;
+    final static private int DEFAULT_Y = 0;
+    private Point centerCoordinates; // Can be done with generics as well.
 
    public Circle(){
-       this("Black", new ArrayList<Double>(4),new Point(0,0), new Point(0,0));
+       this(DEFAULT_COLOR, new ArrayList<>((int) DEFAULT_RADIUS),new Point(DEFAULT_X,DEFAULT_Y), new Point(DEFAULT_X,DEFAULT_Y));
    }
 
     public Circle(String color, List<Double> dimensions, Point centerCoordinates, Point startingDrawPoint) {
         super(color, dimensions, startingDrawPoint);
-        this.centerCoordinates = centerCoordinates;
-    }
-
-    public Point getCenterCoordinates() {
-        return centerCoordinates;
-    }
-
-    public void setCenterCoordinates(Point centerCoordinates) {
         this.centerCoordinates = centerCoordinates;
     }
 

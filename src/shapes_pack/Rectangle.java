@@ -1,17 +1,20 @@
 package shapes_pack;
 
-import shapes_pack.Shape;
-
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Rectangle extends Shape {
+    final static private String DEFAULT_COLOR = "Red";
+    final static private double DEFAULT_LONG_EDGE = 4.0;
+    final static private double DEFAULT_SHORT_EDGE = 3.0;
+    final static private int DEFAULT_X = 3;
+    final static private int DEFAULT_Y = 4;
 
     public Rectangle(){
-        this("Red", new ArrayList<Double>(),new Point(3,4));
-        this.dimensions.add(3.0);
-        this.dimensions.add(4.0);
+        this(DEFAULT_COLOR, new ArrayList<>(),new Point(DEFAULT_X,DEFAULT_Y));
+        this.dimensions.add(DEFAULT_SHORT_EDGE);
+        this.dimensions.add(DEFAULT_LONG_EDGE);
     }
 
     public Rectangle(String color, List<Double> dimensions, Point startingDrawPoint) {
